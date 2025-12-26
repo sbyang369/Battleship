@@ -34,8 +34,10 @@ public class Battleship {
             int targetRow2;
             int targetCol2;
             System.out.println("Player 1, hit: ");
-            targetRow2 = input.nextInt();
-            targetCol2 = input.nextInt();
+            input.nextLine();
+            String[] parts = input.nextLine().split(" ")
+            targetRow2 = Integer.parseInt(parts[0]);
+            targetCol2 = Integer.parseInt(parts[1]);
 
             if (targetRow2 < 0 || targetRow2 > 4 || targetCol2 < 0 || targetCol2 > 4) {
                 System.out.println("Invalid coordinates. Choose different coordinates,");
@@ -83,10 +85,8 @@ public class Battleship {
             }
         }
 
-        for (int row=0;row<5;row++) {
-            for (int col=0;col<2;col++) {
-                board[ships[row][0]][ships[row][1]] = '@';
-            }
+        for (int i=0; i < ships.length; i++) {
+            board[ships[i][0]][ships[i][1]] = '@';
         }
     }
 
