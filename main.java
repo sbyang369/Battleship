@@ -4,6 +4,7 @@ public class Battleship {
         Scanner input = new Scanner(System.in);
         int [][] input1 = new int[5][2];
         int [][] input2 = new int[5][2];
+
         char [][] board1 = new char[5][5];
         char [][] board2 = new char[5][5];
         char [][] history1 = new char[5][5];
@@ -34,8 +35,7 @@ public class Battleship {
             int targetRow2;
             int targetCol2;
             System.out.println("Player 1, hit: ");
-            input.nextLine();
-            String[] parts = input.nextLine().split(" ")
+            String[] parts = input.nextLine().split(" ");
             targetRow2 = Integer.parseInt(parts[0]);
             targetCol2 = Integer.parseInt(parts[1]);
 
